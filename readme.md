@@ -15,8 +15,9 @@ localhost:8080
 Если все прошло хорошо, давайте установим Symfony в нашу папку app. 
 Заходим в наш контейнер с php-cli: 
 
-docker exec -it symfony-app-php-cli bash
+docker exec -it docker-symfony-php-cli bash
 
+где docker-symfony-php-cli - имя образа с php-cli.
 В контейнере выполняем следующую команду, чтобы установить Symfony: 
 
 composer create-project symfony/website-skeleton app
