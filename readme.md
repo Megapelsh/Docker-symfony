@@ -11,3 +11,21 @@ localhost:8081
 
 localhost:8080
 тут должен открыться phpMyAdmin
+
+Если все прошло хорошо, давайте установим Symfony в нашу папку app. 
+Заходим в наш контейнер с php-cli: 
+
+docker exec -it symfony-app-php-cli bash
+
+В контейнере выполняем следующую команду, чтобы установить Symfony: 
+
+composer create-project symfony/website-skeleton app
+
+После установки выполняем несколько команд, чтобы избавиться от вложенности папок:
+
+mv /symfony/app/* /symfony
+mv /symfony/app/.* /symfony
+rm -Rf app
+
+Теперь пробуйте открыть localhost:8081, 
+вас должна приветствовать свежая версия Symfony
